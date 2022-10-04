@@ -15,9 +15,9 @@ function Login() {
                 <input type="text"/>
                 <h5>Password</h5>
                 <input type="password"/>
-                <button>Sign In</button>
+                <button className='SignIn-button'>Sign In</button>
                 <p>By signing in you agree to the terms and conditions of use and sale of the company, Please see our Privacy Notice, Cookies Notice and Privacy bsed AD Notice</p>
-                <button>Create a new Account</button>
+                <button className='SignUp-button'>Create a new Account</button>
             </form>
         </div>
     </div>
