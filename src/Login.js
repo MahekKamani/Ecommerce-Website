@@ -11,7 +11,8 @@ function Login() {
         <div className='login-container'>
             <h1>Sign In</h1>
             <form>
-                <h5></h5>
+                <h5>Email</h5>
+                <input type="text"/>
             </form>
         </div>
     </div>
