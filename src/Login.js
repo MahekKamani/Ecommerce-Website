@@ -14,12 +14,11 @@ function Login() {
 
   const register = e => {
     e.preventDefault()
-    auth
-      .createUserWithEmailAndPassword(email,password)
-      .then((auth) => {
+    auth.createUserWithEmailAndPassword(email,password)
+    auth.then((auth) => {
         console.log(auth);
       })
-      .catch(error => alert(error.message))
+    auth.catch(error => alert(error.message))
   }
 
   return (
