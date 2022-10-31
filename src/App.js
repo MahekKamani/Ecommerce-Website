@@ -1,11 +1,12 @@
-import React, { useEffect } from 'react';
-import Header from './Header.js';
-import Home from './Home.js';
-import Checkout from './Checkout';
+import React, { useEffect } from 'react'
+import Header from './Header.js'
+import Home from './Home.js'
+import Checkout from './Checkout'
 import Login from './Login.js'
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { auth } from './firebase';
-import { useStateValue } from './StateProvider';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
+import { auth } from './firebase'
+import { useStateValue } from './StateProvider'
+import Payment from './Payment.js'
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
   useEffect(() => {
     auth.onAuthStateChanged(authUser => {
       console.log('The user is -> ', authUser);
+      
       if(authUser){
         dispatch({
           type: 'SET_USER',
@@ -35,6 +37,7 @@ function App() {
           <Route path="/login" element={<><Login/></>}/>
           <Route path="/" element={<> <Header /> <Home /> </>}/>
           <Route path="/checkout" element={<> <Header /> <Checkout/></>}/>
+          <Route path="/payment" element={<> <Header /> <Payment/></>}/>
         </Routes>
       </div>
     </Router>

@@ -27,9 +27,9 @@ function Header() {
         </div>
 
         <div className='header_nav'>
-            <Link to={'/login'}>
+            <Link to={!user && '/login'}>
                 <div onClock={handleAuthentication} className="header_option"> 
-                    <span className='header_optionLineOne'>Hello {user.email}</span>
+                    <span className='header_optionLineOne'>Hello {user?.email}</span>
                     <span className='header_optionLineTwo'>{user ? 'Sign Out' : 'Sign In'}</span>
                 </div>
             </Link>
