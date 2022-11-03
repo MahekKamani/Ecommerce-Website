@@ -1,13 +1,19 @@
 import React from 'react'
-import CheckoutProduct from './CheckoutProduct';
+import CheckoutProduct from './CheckoutProduct'
 import './Payment.css'
-import { useStateValue } from './StateProvider';
+import { useStateValue } from './StateProvider'
+import { Link } from "react-router-dom"
 
 function Payment() {
   const [{basket, user},dispatch] = useStateValue();  
   return (
     <div className='payment'>
         <div className='payment_container'>
+            <h1>
+                Checkout (
+                    <Link to="/checkout">{basket?.length} items</Link>
+                )
+            </h1>
             <div className='payment_section'>
                 <div className='payment_title'>
                     <h3>Dilivery Address</h3>
